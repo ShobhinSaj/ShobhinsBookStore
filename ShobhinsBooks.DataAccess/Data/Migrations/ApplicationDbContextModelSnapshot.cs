@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ShobhinsBookStore.Data;
+using ShobhinsBookStore.DataAccess.Data;
 using System;
 
 namespace ShobhinsBookStore.Data.Migrations
