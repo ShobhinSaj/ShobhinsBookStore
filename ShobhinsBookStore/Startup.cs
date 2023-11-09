@@ -7,6 +7,8 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using ShobhinsBooks.DataAccess.Repository;
+using ShobhinsBooks.DataAccess.Repository.IRepository;
 using ShobhinsBookStore.Data;
 using ShobhinsBookStore.DataAccess.Data;
 using System;
@@ -35,6 +37,8 @@ namespace ShobhinsBookStore
 
             services.AddDefaultIdentity<IdentityUser>()/*options => options.SignIn.RequireConfirmedAccount = true*/
                 .AddEntityFrameworkStores<ApplicationDbContext>();
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
+
             services.AddControllersWithViews();
         }
 

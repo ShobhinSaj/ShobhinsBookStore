@@ -5,11 +5,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Dapper" Version="2.1.15" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="5.0.17" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="5.0.17" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.17" />
   </ItemGroup>
 
+	<ItemGroup>
+		<Folder Include="Data\" />
+		<Folder Include="Repository\IRepository\" />
+	</ItemGroup>
+	
   <ItemGroup>
     <ProjectReference Include="..\ShobhinsBooks.Models\ShobhinsBooks.Models.csproj" />
     <ProjectReference Include="..\ShobhinsBooks.Utility\ShobhinsBooks.Utility.csproj" />
