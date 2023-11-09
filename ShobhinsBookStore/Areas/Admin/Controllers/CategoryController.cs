@@ -16,5 +16,13 @@ namespace ShobhinsBookStore.Areas.Admin.Controllers
             return View();
         }
         //API Calls here
+        #region API CALLS
+        [HttpGet]
+        public IActionResult GetAll() {
+            //return NotFound
+            var allObj=_unitOfWork.Category.GetAll();
+            return Json(new { data = allObj });
+        }
+        #endregion
     }
 }
