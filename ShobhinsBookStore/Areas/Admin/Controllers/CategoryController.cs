@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using ShobhinsBooks.DataAccess.Repository.IRepository;
+using ShobhinsBooks.Models;
 
 namespace ShobhinsBookStore.Areas.Admin.Controllers
 {
@@ -13,6 +14,20 @@ namespace ShobhinsBookStore.Areas.Admin.Controllers
         }
         public IActionResult Index()
         {
+            return View();
+        }
+        public IActionResult Upsert(int? id)
+        {
+            Category category=new Category();
+            if (id == null)
+            {
+                return View(category);
+            }
+            category = _unitOfWork.Category.Get(id.GetValueOrDefault());
+            if(category == null)
+            {
+                return NotFound();
+            }
             return View();
         }
         //API Calls here
