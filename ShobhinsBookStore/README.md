@@ -46,34 +46,86 @@ Changes pushed to Github repo.
 
 2023-11-02 @03.00pm Had to redo assignments part 1 steps as I forgot to uncheck the option which puts solution and project in same directory.
 		   
-		   @03.15pm	Modified site.css, _Layout.cshtml, _LoginPartial.cshtml, added new bootstrap theme 'Darkly'
+@03.15pm  Modified site.css, _Layout.cshtml, _LoginPartial.cshtml, added new bootstrap theme 'Darkly'
 		   
-		   @03.22pm Added a dropdown menu to the navbar
+@03.22pm Added a dropdown menu to the navbar
 		   
-		   @03.30pm Created 3 new projects(.NET Core class libraries)
+@03.30pm Created 3 new projects(.NET Core class libraries)
 		   
-		   @03.41pm Installed Microsoft.EntityFrameworkCore.SqlServer/Relational Packages v5.0.17
+@03.41pm Installed Microsoft.EntityFrameworkCore.SqlServer/Relational Packages v5.0.17
 		   
-		   @11.04pm Fixed build errors with namespaces and deleted default class files in new projects added
+@11.04pm Fixed build errors with namespaces and deleted default class files in new projects added
 		   
-		   @11.15pm Moved Models to library ShobhinsBooks.Models and renamed to ViewModels
+@11.15pm Moved Models to library ShobhinsBooks.Models and renamed to ViewModels
 		   
-		   @11.46pm New Area "Customer" added
+@11.46pm New Area "Customer" added
 		   
-		   @11.53pm Added Area "Admin" and updated reference to _Layout.cshtml in _ViewStart.cshtml
+@11.53pm Added Area "Admin" and updated reference to _Layout.cshtml in _ViewStart.cshtml
 
-2023-11-06 @
+2023-11-06 @07.00pm appsttings.json modified to have DB name changed to ShobhinsBookStore
+			
+@07.20pm Migration added and database updated with commands: 
+			
+```
+Add-Migration DefaultIdentityMigrationAdded
+```
+			
+@07.25pm Database updated to apply new migration
+			
+```
+update-database
+```
 
+2023-11-07 01.20am New Category Model added- 'Category.cs'
+			
+@01.24am Migration added to update database with new column Category
+			
+```
+add-migration NewCategoryAdded
 
+```
 
+@01.40am New folder 'Repository' added to library ShobhinsBooks.DataAccess
 
+2023-11-08 	@06.05pm Couldnt complete working on the assignment coz my bootloader was acting weird and the laptop was stuck in a boot loop.
+			
+@06.20pm Interfaces and corresponding classes added to Repository folder with interfaces in a subfolder 'IRepository'.
+			
+@11.01pm New folder 'Controllers' added to Admin Area in ShobhinsBookStore project and new controller added for Category.
+
+2023-11-11 @12.30am _Layout.cshtml modified to have new nav link for category and also added a dropdown menu with code from bootswatch.com
+
+```
+<li class="nav-item dropdown">
+	<a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+	<div class="dropdown-menu">
+		<a class="dropdown-item" href="#">Action</a>
+		<a class="dropdown-item" href="#">Another action</a>
+		<a class="dropdown-item" href="#">Something else here</a>
+	<div class="dropdown-divider"></div>
+	<a class="dropdown-item" href="#">Separated link</a>
+	</div>
+</li>
+```
+
+@12.50am Category.js added with code to display delete and edit icons
+
+@1.35am View file created for the upsert function in Catgory page which lets user add/edit a category
+
+@2.10am Validation functionalities added to Category page using validation script
+
+@3.10am Create/edit functionalities added and tested in category page.
+
+@3.18am Added and tested the delete function in category page which allows user to delete existing categories,uses toaster and sweetalert.
+
+@3.40am Category.js modified to trugger delete category function.
 
 			
 ******************************************************************
 
 **Testing**
 
-![Screenshot_WlcmePage](https://github.com/madmax117/ShobhinThomasSaj_WEB452_ASP/blob/Assignment2/img/Homepage.png)
+![Screenshot_WlcmePage](https://github.com/madmax117/ShobhinsBookStore/blob/master/Screenshot%20(369).png)
 
 The web app has been tested to work as intended.
 *******************************************************************
