@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace ShobhinsBookStore.Data.Migrations
+namespace ShobhinsBooks.DataAccess.Migrations
 {
     public partial class NewCategoryAdded : Migration
     {

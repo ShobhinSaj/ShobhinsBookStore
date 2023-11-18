@@ -10,8 +10,8 @@ using ShobhinsBookStore.DataAccess.Data;
 namespace ShobhinsBooks.DataAccess.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20231111043633_NewCategoryAdded")]
-    partial class NewCategoryAdded
+    [Migration("20231118024640_DefaultIdentityMigrationAdded")]
+    partial class DefaultIdentityMigrationAdded
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
