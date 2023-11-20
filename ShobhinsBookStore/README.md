@@ -118,9 +118,30 @@ add-migration NewCategoryAdded
 
 @3.18am Added and tested the delete function in category page which allows user to delete existing categories,uses toaster and sweetalert.
 
-@3.40am Category.js modified to trugger delete category function.
+@3.40am Category.js modified to trigger delete category function.
 
-			
+2023-11-17 @08.15pm Found a duplicat readme file in the directory which must have been created by accident, deleted the same.
+
+@8.40pm There was a duplicate NewCategoryAdded migration found,this should be from the previous attempt on the project. Removed the same and updated database.
+
+2023-11-20 @09.00am Part 3 submission and assessment is due tomorrow. First step is to add another field to the db using a new model CoverType.
+
+@09.10am The process is same as Category field which was added earlier.
+New CoverType.cs model added to ShobhinsBooks.Models Directory
+ID and Name properties sadded to the model.
+New CoverTypeRepository class and ICoverTypeRepository interface added to respective folders in DataAccess directory.
+Relevant using statements added to CoverTypeRepository class.
+Methods pointing to ApplicationDBContext added to CoverTypeRepository class.
+ICoverTypeRepository interface modified add Update method added.
+ICoverTypeRepository implemented in CoverTypeRepository class and added code to retreive first or default object 
+CoverType added to ApplicatioDbContext to resolve error in CoverTypeRepository
+CoverType added to UnitOfWork and IUnitOfWork
+Migration added to implement CoverType and database updated
+checked migration history to verify if new migration has been applied to db
+```
+get-migration
+```
+
 ******************************************************************
 
 **Testing**
