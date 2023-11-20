@@ -161,6 +161,9 @@ After a lot of headscratching, figured out that UnitOfWork.cs was missing object
  CoverType = new CoverTypeRepository(_db);
 ```
 CoverType page tested to work with all functionalities.
+Product.cs model added to ShobhinsBooks.Models
+Reference to new product model class added to ApplicationDbContext
+
 ******************************************************************
 
 **Testing**
