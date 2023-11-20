@@ -187,6 +187,9 @@ New view file Index.cshtml created for Products and code copied from Category->I
 product.js file added to wwwroot/css dir and modified for Products page.
 Products page added to navbar drop down menu
 Tested application for Products page rendering.
+Upsert.cshtml view added to Product folder
+Added code from files provided
+Created a free account at tiny.cloud to integrate WYSIWYG editor to product page's create/edit product section
 
 
 
