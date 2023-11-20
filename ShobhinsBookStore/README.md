@@ -152,6 +152,15 @@ Generated empty View file Index in the folder
 Modified generic html code in View.
 Tested To see if View is rendered correctly.
 Added CoverType link to the navbar dropdownn menu.
+CoverType.js created and added to wwwroot dir, section call added to Index.cshtml to invoke js
+Tested CoverType Page to see if create and edit functions are working properly
+Received NullException in CoverTypeController.cs GetAll() function invoke statement.
+After a lot of headscratching, figured out that UnitOfWork.cs was missing object creation statement
+
+```
+ CoverType = new CoverTypeRepository(_db);
+```
+CoverType page tested to work with all functionalities.
 ******************************************************************
 
 **Testing**
