@@ -175,6 +175,9 @@ update-database
 add-migration addValidationToProduct
 ```
 Got warning in PM console saying "An operation was scaffolded that may result in the loss of data.Please review the migration for accuracy"
+ProductRepository and IProductRepository interface added
+Reference to the same added to UnitOfWork and IUnitOfWork
+Tested for build errors; none found.
 
 
 
