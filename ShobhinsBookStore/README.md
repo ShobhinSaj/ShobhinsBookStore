@@ -178,7 +178,15 @@ Got warning in PM console saying "An operation was scaffolded that may result in
 ProductRepository and IProductRepository interface added
 Reference to the same added to UnitOfWork and IUnitOfWork
 Tested for build errors; none found.
-
+ProductController class added to Area/Admin/Controllers and modified code as per instructions
+Created new viewmodel ProductVM in ShobhinsBooksModels/ViewModels/
+Microsoft.AspNetCore.Mvc.ViewFeatures package installed to resolve errors in ProductVM.cs.
+ProductController modified to add IActionResult Upsert method and HttpPost,HttpDelete methods. commented out the HttpPost as per instructions. 
+APICall modified to include call to Category and CoverType properties.
+New view file Index.cshtml created for Products and code copied from Category->Index.cshtml; Relevant properties of Product added.
+product.js file added to wwwroot/css dir and modified for Products page.
+Products page added to navbar drop down menu
+Tested application for Products page rendering.
 
 
 
