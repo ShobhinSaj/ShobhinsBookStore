@@ -137,11 +137,21 @@ ICoverTypeRepository implemented in CoverTypeRepository class and added code to 
 CoverType added to ApplicatioDbContext to resolve error in CoverTypeRepository
 CoverType added to UnitOfWork and IUnitOfWork
 Migration added to implement CoverType and database updated
+```
+add-migration CoverTypeAdded
+update-database
+```
 checked migration history to verify if new migration has been applied to db
 ```
 get-migration
 ```
-
+New controlled called CoverTypeController added in Areas/Admin/Controllers
+Relevant code added to use the IUnitOfWork from .DataAccess project
+New Folder called CoverType added in Areas/Admin/Views
+Generated empty View file Index in the folder
+Modified generic html code in View.
+Tested To see if View is rendered correctly.
+Added CoverType link to the navbar dropdownn menu.
 ******************************************************************
 
 **Testing**
