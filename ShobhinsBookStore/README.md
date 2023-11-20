@@ -163,6 +163,21 @@ After a lot of headscratching, figured out that UnitOfWork.cs was missing object
 CoverType page tested to work with all functionalities.
 Product.cs model added to ShobhinsBooks.Models
 Reference to new product model class added to ApplicationDbContext
+@01.40pm migration added and database updated
+```
+add-migration addProductToDb
+update-database
+```
+[Required] validation rule added to Title,ISBN and autho fields 
+
+@01.56pm migration added for new validation rules and database updated
+```
+add-migration addValidationToProduct
+```
+Got warning in PM console saying "An operation was scaffolded that may result in the loss of data.Please review the migration for accuracy"
+
+
+
 
 ******************************************************************
 
