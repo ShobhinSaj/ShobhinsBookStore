@@ -127,42 +127,65 @@ add-migration NewCategoryAdded
 2023-11-20 @09.00am Part 3 submission and assessment is due tomorrow. First step is to add another field to the db using a new model CoverType.
 
 @09.10am The process is same as Category field which was added earlier.
-New CoverType.cs model added to ShobhinsBooks.Models Directory
-ID and Name properties sadded to the model.
-New CoverTypeRepository class and ICoverTypeRepository interface added to respective folders in DataAccess directory.
-Relevant using statements added to CoverTypeRepository class.
-Methods pointing to ApplicationDBContext added to CoverTypeRepository class.
-ICoverTypeRepository interface modified add Update method added.
-ICoverTypeRepository implemented in CoverTypeRepository class and added code to retreive first or default object 
-CoverType added to ApplicatioDbContext to resolve error in CoverTypeRepository
-CoverType added to UnitOfWork and IUnitOfWork
-Migration added to implement CoverType and database updated
+
+@09.20am New CoverType.cs model added to ShobhinsBooks.Models Directory
+
+@09.22am ID and Name properties added to the model.
+
+@09.30am New CoverTypeRepository class and ICoverTypeRepository interface added to respective folders in DataAccess directory.
+
+@09.34am Relevant using statements added to CoverTypeRepository class.
+
+@09.45am Methods pointing to ApplicationDBContext added to CoverTypeRepository class.
+
+@10.15am ICoverTypeRepository interface modified add Update method added.
+
+@10.25am ICoverTypeRepository implemented in CoverTypeRepository class and added code to retreive first or default object 
+
+@10.34am CoverType added to ApplicatioDbContext to resolve error in CoverTypeRepository
+
+@01.00pm CoverType added to UnitOfWork and IUnitOfWork
+
+@01.15pm Migration added to implement CoverType and database updated
 ```
 add-migration CoverTypeAdded
 update-database
 ```
-checked migration history to verify if new migration has been applied to db
+@01.20pm checked migration history to verify if new migration has been applied to db
 ```
 get-migration
 ```
-New controlled called CoverTypeController added in Areas/Admin/Controllers
-Relevant code added to use the IUnitOfWork from .DataAccess project
-New Folder called CoverType added in Areas/Admin/Views
-Generated empty View file Index in the folder
+@01.26pm New controlled called CoverTypeController added in Areas/Admin/Controllers
+
+@01.27pm Relevant code added to use the IUnitOfWork from .DataAccess project
+
+@01.30pm New Folder called CoverType added in Areas/Admin/Views
+
+@01.32pm Generated empty View file Index in the folder
+
 Modified generic html code in View.
+
 Tested To see if View is rendered correctly.
+
 Added CoverType link to the navbar dropdownn menu.
+
 CoverType.js created and added to wwwroot dir, section call added to Index.cshtml to invoke js
-Tested CoverType Page to see if create and edit functions are working properly
+
+@01.37pm Tested CoverType Page to see if create and edit functions are working properly
+
 Received NullException in CoverTypeController.cs GetAll() function invoke statement.
+
 After a lot of headscratching, figured out that UnitOfWork.cs was missing object creation statement
 
 ```
  CoverType = new CoverTypeRepository(_db);
 ```
 CoverType page tested to work with all functionalities.
+
 Product.cs model added to ShobhinsBooks.Models
+
 Reference to new product model class added to ApplicationDbContext
+
 @01.40pm migration added and database updated
 ```
 add-migration addProductToDb
@@ -174,23 +197,41 @@ update-database
 ```
 add-migration addValidationToProduct
 ```
-Got warning in PM console saying "An operation was scaffolded that may result in the loss of data.Please review the migration for accuracy"
-ProductRepository and IProductRepository interface added
-Reference to the same added to UnitOfWork and IUnitOfWork
-Tested for build errors; none found.
-ProductController class added to Area/Admin/Controllers and modified code as per instructions
-Created new viewmodel ProductVM in ShobhinsBooksModels/ViewModels/
-Microsoft.AspNetCore.Mvc.ViewFeatures package installed to resolve errors in ProductVM.cs.
-ProductController modified to add IActionResult Upsert method and HttpPost,HttpDelete methods. commented out the HttpPost as per instructions. 
-APICall modified to include call to Category and CoverType properties.
-New view file Index.cshtml created for Products and code copied from Category->Index.cshtml; Relevant properties of Product added.
-product.js file added to wwwroot/css dir and modified for Products page.
-Products page added to navbar drop down menu
-Tested application for Products page rendering.
-Upsert.cshtml view added to Product folder
-Added code from files provided
-Created a free account at tiny.cloud to integrate WYSIWYG editor to product page's create/edit product section
+@01.58pm Got warning in PM console saying "An operation was scaffolded that may result in the loss of data.Please review the migration for accuracy"
 
+@02.08pm ProductRepository and IProductRepository interface added
+
+@02.13pm Reference to the same added to UnitOfWork and IUnitOfWork
+
+@02.24pm Tested for build errors; none found.
+
+@02.30pm ProductController class added to Area/Admin/Controllers and modified code as per instructions
+
+@02.34pm Created new viewmodel ProductVM in ShobhinsBooksModels/ViewModels/
+
+@02.43pm Microsoft.AspNetCore.Mvc.ViewFeatures package installed to resolve errors in ProductVM.cs.
+
+@02.50pm ProductController modified to add IActionResult Upsert method and HttpPost,HttpDelete methods. commented out the HttpPost as per instructions. 
+
+@02.55pm APICall modified to include call to Category and CoverType properties.
+
+03.30pm New view file Index.cshtml created for Products and code copied from Category->Index.cshtml; Relevant properties of Product added.
+
+@03.43pm product.js file added to wwwroot/css dir and modified for Products page.
+
+@03.50pm Products page added to navbar drop down menu
+
+@03.54pm Tested application for Products page rendering.
+
+@04.00pm Upsert.cshtml view added to Product folder
+
+@04.12pm Added code from files provided
+
+@04.16pm Created a free account at tiny.cloud to integrate WYSIWYG editor to product page's create/edit product section
+
+@04.30pm Tested the Product page for added functionalities
+
+@04.32pm Uncommented the HttpPost method in Product Controller as per instructions.
 
 
 ******************************************************************
