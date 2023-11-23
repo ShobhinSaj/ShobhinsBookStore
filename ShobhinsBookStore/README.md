@@ -233,7 +233,9 @@ add-migration addValidationToProduct
 
 @04.32pm Uncommented the HttpPost method in Product Controller as per instructions.
 
-
+2023-11-23 @04.15pm Noticed that the create new buttons on index pages for Category,CoverType and product were
+aligned incorrectly,figured out it was because of the bootstrap class text-right used instead of text-end,
+corrected the same on all 3 index views and tested the output.
 ******************************************************************
 
 **Testing**
