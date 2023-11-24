@@ -236,6 +236,9 @@ add-migration addValidationToProduct
 2023-11-23 @04.15pm Noticed that the create new buttons on index pages for Category,CoverType and product were
 aligned incorrectly,figured out it was because of the bootstrap class text-right used instead of text-end,
 corrected the same on all 3 index views and tested the output.
+
+@9.46pm Tried to insert a new product and noticed that the CoverType dropdown lists out categories,instead of covertypes, fixed the same 
+in Product>upsert.cshtml
 ******************************************************************
 
 **Testing**
