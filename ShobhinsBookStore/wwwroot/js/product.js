@@ -13,9 +13,9 @@ function loadDataTable() {
         "columns": [
             { "data": "title", "width": "60%" },
             { "data": "isbn", "width": "60%" },
-            { "data": "price", "width": "60%" },
+            { "data": "listPrice", "width": "60%" },
             { "data": "author", "width": "60%" },
-            { "data": "category.Name", "width": "60%" },
+            { "data": "category.name", "width": "60%" },
             {
                 "data": "id",
                 "render": function (data) {
@@ -28,10 +28,13 @@ function loadDataTable() {
                                     <i class="fas fa-trash-alt"></i>&nbsp;
                                 </a>
                             </div>
-                            `;s
+                            `;
                 }, "width": "40%"
             }
-        ]
+        ],
+        "initComplete": function (settings, json) {
+            console.log(json); // Log the returned JSON data to the console
+        }
     });
 }
 function Delete(url) {

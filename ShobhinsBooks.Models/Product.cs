@@ -20,7 +20,7 @@ namespace ShobhinsBooks.Models
         [Required]
         [Range(1, 10000)]
         public double ListPrice { get; set; }
-        public string ImageUr1 { get; set; }
+        public string ImageUrl { get; set; }
 
         [Required]
         public int CategoryId { get; set; }
@@ -29,7 +29,7 @@ namespace ShobhinsBooks.Models
 
         [Required]
         public int CoverTypeId { get; set; }
-        [ForeignKey("CategoryId")]
+        [ForeignKey("CoverTypeId")]
         public CoverType CoverType { get; set; }
     }
 }

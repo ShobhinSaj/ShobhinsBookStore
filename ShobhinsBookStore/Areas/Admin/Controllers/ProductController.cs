@@ -39,7 +39,7 @@ namespace ShobhinsBookStore.Areas.Admin.Controllers
                 {
                     Text = i.Name,
                     Value = i.Id.ToString()
-                }),
+                })
             };
             if (id == null)
             {
@@ -54,23 +54,23 @@ namespace ShobhinsBookStore.Areas.Admin.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Upsert(Product product)
+        public IActionResult Upsert(ProductVM productVM)
         {
             if (ModelState.IsValid)
             {
-                if (product.Id == 0)
+                if (productVM.Product.Id == 0)
                 {
-                    _unitOfWork.Product.Add(product);
+                    _unitOfWork.Product.Add(productVM.Product);
 
                 }
                 else
                 {
-                    _unitOfWork.Product.Update(product);
+                    _unitOfWork.Product.Update(productVM.Product);
                 }
                 _unitOfWork.Save();
                 return RedirectToAction(nameof(Index));
             }
-            return View(product);
+            return View(productVM);
         }
 
         //API Calls here

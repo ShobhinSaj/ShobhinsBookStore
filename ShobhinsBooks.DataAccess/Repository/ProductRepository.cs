@@ -22,9 +22,9 @@ namespace ShobhinsBooks.DataAccess.Repository
             var objFromDb = _db.Products.FirstOrDefault(s => s.Id == product.Id);
             if (objFromDb != null)  //save changes if not null
             {
-                if(product.ImageUr1 != null)
+                if(product.ImageUrl != null)
                 {
-                    objFromDb.ImageUr1 = product.ImageUr1;
+                    objFromDb.ImageUrl = product.ImageUrl;
                 }
                 objFromDb.Title = product.Title;
                 objFromDb.Description = product.Description;

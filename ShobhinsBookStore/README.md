@@ -239,6 +239,37 @@ corrected the same on all 3 index views and tested the output.
 
 @9.46pm Tried to insert a new product and noticed that the CoverType dropdown lists out categories,instead of covertypes, fixed the same 
 in Product>upsert.cshtml
+
+@10.02 Tried to insert a new product again and that didnt work,noticed that I was missing a bit of code for _CreateAndBackToListButton. 
+Added the same and lets see if that would fix the issue with adding a product.
+
+@10.29pm Noticed that the Product property Imageurl was incorrectly added as ImageUr1,created a migration for the same and updated
+the database
+```
+add-migration EditProductDbFieldName
+```
+
+@10.48pm All that still didn't fix the issue with not being able to add a product. Checked product controller to see if there's anything wrong.  HttpPost had Product product being passed
+insteead of ProductVM productVM. Changed the same and lets see if that's fix the issue
+
+@10.50pm Got sql exception
+"SqlException: The INSERT statement conflicted with the FOREIGN KEY constraint "FK_Products_CoverTypes_CategoryId". The conflict occurred in database "ShobhinsBookStore", table "dbo.CoverTypes", column 'Id'."
+
+@11.03pm Corrected the forien key constraint in Product Model
+
+@11.20pm Added a migration for the changes made in Product Model
+```
+add-migration EditProductModel
+```
+
+@11.30pm SQL Exception resolved. Encountered datatable error when populating data in Product index page. 
+"DataTables warning: table id=tblData - Requested unknown parameter 'price' for row 0, column 2."
+
+@12.10pm Checked datatables init script product.js if I missed something in there
+
+@12.30pm After a lot of headscratching and with a li'l bit of help from google,finally figured out what was going wrong with the 
+data retrieval, the property names to be returned had a few mismatches with the property names in the json data file generated. 
+Fixed the same and now the issue has been resolved.
 ******************************************************************
 
 **Testing**
