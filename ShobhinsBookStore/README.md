@@ -288,6 +288,8 @@ The homescreen needs to retreive the cover images of book records and show it.
 2023-11-25 @12.40pm Done with the additions and tested out the new homepage. Gor NullObjectException.
 Checked HomeController and index.cshtml again. Turns out the IActionResult Index() method was returning view without passing the
 IEnumerable produclList as parameter. Corrected the same and everythings working as expected.
+
+@12.50am Added a few more categories,covertypes and added one more product,everything works as expected
 ******************************************************************
 
 **Testing**
