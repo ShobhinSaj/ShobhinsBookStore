@@ -279,8 +279,15 @@ relevant code to display the book images.
 
 @11.30pm Tested out updating the existing product entry that I made yesterday and the image is being stored as intended. Noticed that the column
 widths of product page needs to be adjusted. Did a bit of research and found that the width of columns can be adjusted from 
-product.js, changed the same and the columns look mucch better now.
+product.js, changed the same and the columns look much better now.
 
+@11.55pm I need to modify the HomeController which controls the index view which is the first thing that is rendered when the app is launched.
+The homescreen needs to retreive the cover images of book records and show it.
+
+
+2023-11-25 @12.40pm Done with the additions and tested out the new homepage. Gor NullObjectException.
+Checked HomeController and index.cshtml again. Turns out the IActionResult Index() method was returning view without passing the
+IEnumerable produclList as parameter. Corrected the same and everythings working as expected.
 ******************************************************************
 
 **Testing**
