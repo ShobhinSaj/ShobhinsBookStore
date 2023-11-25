@@ -265,11 +265,22 @@ add-migration EditProductModel
 @11.30pm SQL Exception resolved. Encountered datatable error when populating data in Product index page. 
 "DataTables warning: table id=tblData - Requested unknown parameter 'price' for row 0, column 2."
 
-@12.10pm Checked datatables init script product.js if I missed something in there
+2023-11-24 @12.10pm Checked datatables init script product.js if I missed something in there
 
 @12.30pm After a lot of headscratching and with a li'l bit of help from google,finally figured out what was going wrong with the 
 data retrieval, the property names to be returned had a few mismatches with the property names in the json data file generated. 
 Fixed the same and now the issue has been resolved.
+
+@11.05pm So far I've completed working with how products get added or modified,the next phase of the Bookstore project is to modify ProductController to 
+ensure the image uploaded during product creation is properly stored and the Homecontroller also needs to be modified to ensure it has 
+relevant code to display the book images.
+
+@11.10 Referring to BulkyBook,added code to ProductController,to store the image uploaded to wwwroot/images/products/ dir.
+
+@11.30pm Tested out updating the existing product entry that I made yesterday and the image is being stored as intended. Noticed that the column
+widths of product page needs to be adjusted. Did a bit of research and found that the width of columns can be adjusted from 
+product.js, changed the same and the columns look mucch better now.
+
 ******************************************************************
 
 **Testing**

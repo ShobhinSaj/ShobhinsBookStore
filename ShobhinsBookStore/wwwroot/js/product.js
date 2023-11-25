@@ -11,11 +11,11 @@ function loadDataTable() {
             "url": "/Admin/Product/GetAll"
         },
         "columns": [
-            { "data": "title", "width": "60%" },
-            { "data": "isbn", "width": "60%" },
-            { "data": "listPrice", "width": "60%" },
-            { "data": "author", "width": "60%" },
-            { "data": "category.name", "width": "60%" },
+            { "data": "title", "width": "15%" },
+            { "data": "isbn", "width": "15%" },
+            { "data": "listPrice", "width": "15%" },
+            { "data": "author", "width": "15%" },
+            { "data": "category.name", "width": "15%" },
             {
                 "data": "id",
                 "render": function (data) {
@@ -29,7 +29,7 @@ function loadDataTable() {
                                 </a>
                             </div>
                             `;
-                }, "width": "40%"
+                }, "width": "50%"
             }
         ],
         "initComplete": function (settings, json) {
