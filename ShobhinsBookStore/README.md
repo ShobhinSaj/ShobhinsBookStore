@@ -290,6 +290,9 @@ Checked HomeController and index.cshtml again. Turns out the IActionResult Index
 IEnumerable produclList as parameter. Corrected the same and everythings working as expected.
 
 @12.50am Added a few more categories,covertypes and added one more product,everything works as expected
+
+@05.40 Reviewed the final output and noticed that the card layout on the homepage needs to aligned properly,added height attribs to 
+card element and tested the output.
 ******************************************************************
 
 **Testing**
