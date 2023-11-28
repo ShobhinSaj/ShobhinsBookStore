@@ -293,6 +293,9 @@ IEnumerable produclList as parameter. Corrected the same and everythings working
 
 @05.40 Reviewed the final output and noticed that the card layout on the homepage needs to aligned properly,added height attribs to 
 card element and tested the output.
+
+2023-11-28 @01.44am Modified the if condition in index view of home to display a welcome message in case there are no products instead of 
+showing a blank screen.
 ******************************************************************
 
 **Testing**

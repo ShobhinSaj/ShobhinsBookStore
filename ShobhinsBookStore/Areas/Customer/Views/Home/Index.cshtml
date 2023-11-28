@@ -9,10 +9,12 @@
 </div>
  *@
 <div class="row pb-3 backgroundDark">
-    @if (Model != null)
+    @if (Model.Any())
     {
+        
         foreach (var product in Model)
         {
+        
             <div class="col-lg-3 col-md-6">
                 <div class="row p-1 h-100">
                     <div class="col-12  p-1" style="border:1px solid #008cba; border-radius: 5px;">
@@ -36,8 +38,9 @@
     else
     {
          <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+             <h1 class="display-4 text-white">Welcome to Shobhins BookStore</h1>
+               @* <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p> *@
+               <p class="text-danger fs-5">Oops! We are currently under maintenance, Please check back with us later!</p>
+           </div>
     }
 </div>
