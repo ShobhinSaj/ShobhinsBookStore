@@ -143,6 +143,16 @@ namespace ShobhinsBookStore.Areas.Admin.Controllers
             {
                 return Json(new { success = false, message = "Error while deleting" });
             }
+            string webRootPath = _hostEnvironment.WebRootPath;
+            if (objFromDb.ImageUrl != null)         //in case a product doesnt have an image uploaded
+            {
+
+                var imagePath = Path.Combine(webRootPath, objFromDb.ImageUrl.TrimStart('\\'));
+                if (System.IO.File.Exists(imagePath))
+                {
+                    System.IO.File.Delete(imagePath);
+                }
+            }
             _unitOfWork.Product.Remove(objFromDb);
             _unitOfWork.Save();
             return Json(new { success = true, message = "Delete Successful" });

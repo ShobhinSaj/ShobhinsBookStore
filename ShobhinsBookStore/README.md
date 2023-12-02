@@ -296,6 +296,16 @@ card element and tested the output.
 
 2023-11-28 @01.44am Modified the if condition in index view of home to display a welcome message in case there are no products instead of 
 showing a blank screen.
+
+2023-12-2 @3.00pm Noticed that my delete function had an issue where in .if a product doesn't have animage added to ot,then,
+the delete function returns a null exception as <<objFromDb.Product.ImageUrl>> returns null.
+
+@3.15pm Added an if block which checks if objFromDb.Product.ImageUrl is != null, and runs the image deleteion only if this condition
+returns true, else, the product is removed entirely.
+
+@3.15pm Tested if the new if block works as intended. 
+
+@3.26pm Everything works as intended so far. Pushing progress to Git
 ******************************************************************
 
 **Testing**
