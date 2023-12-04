@@ -305,7 +305,9 @@ returns true, else, the product is removed entirely.
 
 @3.15pm Tested if the new if block works as intended. 
 
-@3.26pm Everything works as intended so far. Pushing progress to Git
+@3.26pm Everything works as intended so far. Pushing progress to Git.
+
+2023-12-04 @5.15pm Updated Readme.md file with project description
 ******************************************************************
 
 **Testing**
