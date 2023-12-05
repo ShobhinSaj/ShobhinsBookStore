@@ -346,7 +346,7 @@ to improve readability of the page.
 @12.47am Tested out everything with a few more books added. This marks the end of this wonderful journey 
 building the bookstore MVC App. 
 
-
+@3.49pm Updated Readme.md with git clone instructions
 
 ******************************************************************
 

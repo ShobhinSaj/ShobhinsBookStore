@@ -1,6 +1,7 @@
 # Shobhin's Bookstore - MVC Web Application
 
 Welcome to Shobhin's Bookstore, a virtual bookstore powered by a .NET 5.1 MVC web application. This application provides users with the ability to browse a collection of books and also allows users with admin privileges to perform CRUD (Create, Read, Update, Delete) operations, and seamlessly interact with a connected database to store and retrieve data.
+As of now it doesn't have authentication enabled, this will be added in a later update.
 
 ## Features
 
@@ -14,7 +15,7 @@ Follow these steps to set up and run the Shobhin's Bookstore locally:
 
 1. **Clone the Repository in Visual Studio:**
 ```
-git clone https://github.com/your-username/shobhinsbookstore.git
+git clone https://github.com/madmax117/ShobhinsBookStore.git
 ```
 2. Open the project solution file "ShobhinsBookStore.sln"
 
