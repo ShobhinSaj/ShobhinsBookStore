@@ -307,6 +307,9 @@ returns true, else, the product is removed entirely.
 
 @3.26pm Everything works as intended so far. Pushing progress to Git.
 
+@9.26pm Added class h-100 to img element within card in index view so that all cards are of same height.
+
+
 2023-12-04 @5.15pm Updated Readme.md file with project description
 ******************************************************************
 
