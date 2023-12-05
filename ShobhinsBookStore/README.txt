@@ -352,7 +352,7 @@ building the bookstore MVC App.
 
 **Testing**
 
-![Screenshot_WlcmePage](https://github.com/madmax117/ShobhinsBookStore/blob/master/Screenshot%20(374).png)
+![Screenshot_WlcmePage](https://github.com/madmax117/ShobhinsBookStore/blob/master/Screenshot.png)
 
 The web app has been tested to work as intended.
 *******************************************************************

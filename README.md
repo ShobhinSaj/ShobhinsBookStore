@@ -13,7 +13,7 @@ Welcome to Shobhin's Bookstore, a virtual bookstore powered by a .NET 5.1 MVC we
 Follow these steps to set up and run the Shobhin's Bookstore locally:
 
 1. **Clone the Repository in Visual Studio:**
-```bash
+```
 git clone https://github.com/your-username/shobhinsbookstore.git
 ```
 2. Open the project solution file "ShobhinsBookStore.sln"
@@ -23,3 +23,7 @@ git clone https://github.com/your-username/shobhinsbookstore.git
 update-database
 ```
 4.Build and run the application.
+
+## Output
+
+![Screenshot_WlcmePage](https://github.com/madmax117/ShobhinsBookStore/blob/master/Screenshot.png)
