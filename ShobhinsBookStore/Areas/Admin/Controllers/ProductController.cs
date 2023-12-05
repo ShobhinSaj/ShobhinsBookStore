@@ -8,6 +8,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace ShobhinsBookStore.Areas.Admin.Controllers
@@ -93,6 +94,7 @@ namespace ShobhinsBookStore.Areas.Admin.Controllers
                         productVM.Product.ImageUrl = objFromDb.ImageUrl;
                     }
                 }
+                //productVM.Product.Description = StripHtmlTags(productVM.Product.Description);//Strip <p> tags from product description
                 if (productVM.Product.Id == 0)
                 {
                     _unitOfWork.Product.Add(productVM.Product);
@@ -124,6 +126,11 @@ namespace ShobhinsBookStore.Areas.Admin.Controllers
             }
             return View(productVM);
         }
+
+        //private static string StripHtmlTags(string description)  //function to strip html tags from description
+        //{
+        //    return Regex.Replace(description, "<.*?>", string.Empty);
+        //}
 
         //API Calls here
         #region API_CALLS

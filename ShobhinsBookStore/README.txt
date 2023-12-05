@@ -307,15 +307,52 @@ returns true, else, the product is removed entirely.
 
 @3.26pm Everything works as intended so far. Pushing progress to Git.
 
+2023-12-04 @5.15pm Updated Readme.md file with project description
+
 @9.26pm Added class h-100 to img element within card in index view so that all cards are of same height.
 
+@10.00pm Added a details button to index view of Home. The purpose of ths button is to render a new view
+which shows the details of the particular product.
 
-2023-12-04 @5.15pm Updated Readme.md file with project description
+@10.30pm Generated a new view file with name Details,this will be rendered when Details button is pressed 
+on the card in index view.
+
+@10.34pm Added the IActionresult Details method in HomeController which will control the Details display of 
+a record.
+
+@10.40pm Added code to details view to display book details along with the image appropriately;using bootsrap classes
+makes the whole process a lot more simpler.
+
+@11.00pm Tested the new details view and noticed that the description property of product object has 
+<p> html tags added to it. Modified the Details view to have the description within a div tag instead of 
+of putting it within a <p> tag. This was after exploring the possibility of stripping html tags from the description content using 
+a custom method 
+```
+private static string StripHtmlTags(string description)  //function to strip html tags from description
+{
+ return Regex.Replace(description, "<.*?>", string.Empty);
+}
+```
+
+@11.12pm Added a Back to list button at the bottom of the details page for the user to navigate back to the homepage.
+
+@11.20pm Added new product to test out the details page. Noticed that the description included html entities as well.
+Added the @Html.Raw prefix to the description to get rid of html entities in the description especially 
+when the content is something copied from a website etc.
+
+@12.10am Added order classes to the details page div elements to show the book cover image first om medium or smaller screens 
+to improve readability of the page.
+
+@12.47am Tested out everything with a few more books added. This marks the end of this wonderful journey 
+building the bookstore MVC App. 
+
+
+
 ******************************************************************
 
 **Testing**
 
-![Screenshot_WlcmePage](https://github.com/madmax117/ShobhinsBookStore/blob/master/Screenshot%20(369).png)
+![Screenshot_WlcmePage](https://github.com/madmax117/ShobhinsBookStore/blob/master/Screenshot%20(374).png)
 
 The web app has been tested to work as intended.
 *******************************************************************

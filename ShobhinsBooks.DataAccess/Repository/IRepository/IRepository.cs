@@ -14,7 +14,7 @@ namespace ShobhinsBooks.DataAccess.Repository.IRepository
             Func<IQueryable<T>,IOrderedQueryable<T>> orderBy = null,
             string includeProperties = null
             );
-        T GetFirstOrefault(
+        T GetFirstOrDefault(
             Expression<Func<T, bool>> filter = null,
             string includeProperties = null
             );

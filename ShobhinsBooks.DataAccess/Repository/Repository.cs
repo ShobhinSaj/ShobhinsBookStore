@@ -52,7 +52,7 @@ namespace ShobhinsBooks.DataAccess.Repository
             return query.ToList();      // returns the IEnumerable based on the conditions of the query
         }
 
-        public T GetFirstOrefault(Expression<Func<T, bool>> filter = null, string includeProperties = null)
+        public T GetFirstOrDefault(Expression<Func<T, bool>> filter = null, string includeProperties = null)
         {
             IQueryable<T> query = dbSet;
             if (filter != null)
